@@ -23,7 +23,7 @@ const getMyFavData=require('./modules/getMyFavData')
 const getApiColorsData=require('./modules/getApiColorsData')
 const addToFav=require('./modules/addToFav')
 const deleteFromFavData=require('./modules/deleteFromFavData')
-
+const updateFromFavData=require('./modules/updateFromFavData')
 
 
 // http://localhost:3001/
@@ -46,6 +46,8 @@ app.post('/addToFav' , addToFav)
 app.delete('/delete/:id',deleteFromFavData)
 
 
+// http://localhost:3001/update
+app.put('/update/:id',updateFromFavData)
 
 app.listen(PORT, () =>{
     console.log(`listin on ${PORT}`);
