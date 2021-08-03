@@ -18,7 +18,7 @@ let myUserModel = mongoose.model("color", userData);
 
 function seed() {
     let userData = new myUserModel({
-        email: 'ibrahem.sarayrah@gmail.com',
+        email: 'quraanrazan282@gmail.com',
         color: [
             {
                 title: "Black",

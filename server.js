@@ -10,7 +10,10 @@ app.use(express.json());
 const PORT=process.env.PORT
 
 const mongoose = require("mongoose");
-mongoose.connect('mongodb://localhost:27017/ColorDataBase',{ useNewUrlParser: true, useUnifiedTopology: true });
+
+// 'mongodb://localhost:27017/ColorDataBase'
+// 'mongodb://ibrahem:mkexU8D3U8ME0Irb@cluster0-shard-00-00.lcjdj.mongodb.net:27017,cluster0-shard-00-01.lcjdj.mongodb.net:27017,cluster0-shard-00-02.lcjdj.mongodb.net:27017/ColorDataBase?ssl=true&replicaSet=atlas-mhw0gl-shard-0&authSource=admin&retryWrites=true&w=majority'
+mongoose.connect(process.env.MONGODB,{ useNewUrlParser: true, useUnifiedTopology: true });
 
 const myUserModel=require('./modules/myUserModel')
 
